@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if latest_blog %}
+    <ul>
+        {% for blog in latest_blog %}
+        <li>{{ blog.title }}</li>
+            <li>{{ blog.text }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No blogs are available.</p>
+    {% endif %}
+</body>
+</html>

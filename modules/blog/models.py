@@ -11,3 +11,6 @@ class BlogPost(models.Model):
     published_date = models.DateTimeField('paylaşılan tarih',blank=True, null=True)
     tag = models.CharField('etiket', max_length=50)
     image = models.ImageField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
