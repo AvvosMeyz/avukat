@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>HTML Template</title>
+	<title>Avukat Samet Varol</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -70,18 +70,18 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#service">Services</a></li>
-					<li><a href="#pricing">Prices</a></li>
-					<li><a href="#team">Team</a></li>
-					<li class="has-dropdown"><a href="#blog">Blog</a>
+					<li><a href="#home">Anasayfa</a></li>
+					<li><a href="#about">Hakkımızda</a></li> 
+			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
+					<li><a href="#service">Faaliyet Alanlarımız</a></li>
+				<!--<li><a href="#pricing">Prices</a></li> -->	
+				<!--<li><a href="#team">Team</a></li>-->
+					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
 						<ul class="dropdown">
 							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
 						</ul>
 					</li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact">İletişim</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -90,18 +90,18 @@
 		<!-- /Nav -->
 
 		<!-- home wrapper -->
-		<div class="home-wrapper">
+		<div id="home1" class="home-wrapper">
 			<div class="container">
 				<div class="row">
 
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">Avukat Samet Varol</h1>
-							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
+							<h1 class="white-text">Av. Samet Varol <br>Hukuk Bürosu</h1>
+							<p class="white-text">hukuk bürosu
 							</p>
-							<button class="white-btn">Get Started!</button>
-							<button class="main-btn">Learn more</button>
+							<a href="#contact"><button class="white-btn">İletişime Geç!</button></a>
+                            <a href="#about"><button class="main-btn">Daha Fazla Öğren</button></a>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -133,9 +133,9 @@
 				<div class="col-md-4">
 					<div class="about">
 						<i class="fa fa-cogs"></i>
-						<h3>Fully Customizible</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
+						<h3>Gizlilik ve Mesleki Sır</h3>
+						<p>Sır saklama ve gizlilik avukatlık mesleğinin en önemli etik ilkelerinden biridir. Avukatlık Kanunu ile belirlenen gizlilik ve sır saklama ilkesini benimser.</p>
+						<a href="#">Devamı</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -144,9 +144,9 @@
 				<div class="col-md-4">
 					<div class="about">
 						<i class="fa fa-magic"></i>
-						<h3>Awesome Features</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
+						<h3>Şeffaflık</h3>
+						<p>Avukat Mesleki faaliyetini icra ederken yapılan işin veya davanın aşamaları ve olası sonuçları hakkındaki hukuki görüşünü müvekkiline aktarmalıdır.</p>
+						<a href="#">Devamı</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -155,9 +155,9 @@
 				<div class="col-md-4">
 					<div class="about">
 						<i class="fa fa-mobile"></i>
-						<h3>Fully Responsive</h3>
-						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-						<a href="#">Read more</a>
+						<h3>Bağımsızlık</h3>
+						<p>Hak arama özgürlüğünün güvencesi olan avukatlık mesleğinin icrasında 'bağımsızlık' etkin bir savunma için zorunludur.</p>
+						<a href="#">Devamı</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -748,11 +748,14 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Recents news</h2>
+					<h2 class="title">En Son Makalelerim</h2>
 				</div>
 				<!-- /Section header -->
 
 				<!-- blog -->
+            {% if latest_blog %}
+                {% for blog in latest_blog %}
+                    {% if forloop.last %}
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
@@ -760,19 +763,25 @@
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>John doe</li>
-								<li><i class="fa fa-clock-o"></i>18 Oct</li>
-								<li><i class="fa fa-comments"></i>57</li>
+								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
+                                <li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>Molestie at elementum eu facilisis sed odio</h3>
-							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-							<a href="#">Read more</a>
+							<h3>{{ blog.title }}</h3>
+							<p>{{ blog.text|truncatewords:"12" }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+                            <a href="#">Read more</a>
 						</div>
 					</div>
 				</div>
 				<!-- /blog -->
 
 				<!-- blog -->
+            {% if latest_blog %}
+                {% for blog in latest_blog %}
+                    {% ifequal forloop.revcounter 2 %}
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
@@ -780,19 +789,25 @@
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>John doe</li>
-								<li><i class="fa fa-clock-o"></i>18 Oct</li>
-								<li><i class="fa fa-comments"></i>57</li>
+								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
+								<li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>Molestie at elementum eu facilisis sed odio</h3>
-							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+							<h3>{{ blog.title }}</h3>
+							<p>{{ blog.text|truncatewords:"12" }}</p>
 							<a href="#">Read more</a>
 						</div>
 					</div>
 				</div>
+                    {% endifequal %}
+                {% endfor %}
+            {% endif %}
 				<!-- /blog -->
 
 				<!-- blog -->
+            {% if latest_blog %}
+                {% for blog in latest_blog %}
+                    {% ifequal forloop.revcounter 3 %}
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
@@ -800,16 +815,19 @@
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>John doe</li>
-								<li><i class="fa fa-clock-o"></i>18 Oct</li>
-								<li><i class="fa fa-comments"></i>57</li>
+								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
+								<li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>Molestie at elementum eu facilisis sed odio</h3>
-							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+							<h3>{{ blog.title }}</h3>
+							<p>{{ blog.text|truncatewords:"12" }}</p>
 							<a href="#">Read more</a>
 						</div>
 					</div>
 				</div>
+                    {% endifequal %}
+                {% endfor %}
+            {% endif %}
 				<!-- /blog -->
 
 			</div>

@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from modules.blog.models import BlogPost
 
 
 def index(request):
-    return render(request, 'index/index.html')
+    latest_blog = BlogPost.objects.all()
+    context = {
+        'latest_blog': latest_blog,
+    }
+    return render(request, 'index/index.html', context)
 
 
 def home(request):
