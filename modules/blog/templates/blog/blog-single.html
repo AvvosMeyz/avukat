@@ -65,18 +65,18 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="../../../index/templates/index/index.html#home">Home</a></li>
-					<li><a href="../../../index/templates/index/index.html#about">About</a></li>
-					<li><a href="../../../index/templates/index/index.html#portfolio">Portfolio</a></li>
-					<li><a href="../../../index/templates/index/index.html#service">Services</a></li>
-					<li><a href="../../../index/templates/index/index.html#pricing">Prices</a></li>
-					<li><a href="../../../index/templates/index/index.html#team">Team</a></li>
-					<li class="has-dropdown"><a>Blog</a>
+					<li><a href="{% url 'index:index' %}">Anasayfa</a></li>
+					<li><a href="#about">Hakkımızda</a></li>
+			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
+					<li><a href="#service">Faaliyet Alanlarımız</a></li>
+				<!--<li><a href="#pricing">Prices</a></li> -->
+				<!--<li><a href="#team">Team</a></li>-->
+					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
 						<ul class="dropdown">
-							<li><a href="#">blog post</a></li>
+							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
 						</ul>
 					</li>
-					<li><a href="../../../index/templates/index/index.html#contact">Contact</a></li>
+					<li><a href="#contact">İletişim</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -85,6 +85,7 @@
 		<!-- /Nav -->
 
 		<!-- header wrapper -->
+        <!--
 		<div class="header-wrapper sm-padding bg-grey">
 			<div class="container">
 				<h2>Blog Page</h2>
@@ -95,6 +96,7 @@
 				</ul>
 			</div>
 		</div>
+	    -->
 		<!-- /header wrapper -->
 
 	</header>
@@ -117,13 +119,20 @@
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>John doe</li>
-								<li><i class="fa fa-clock-o"></i>18 Oct</li>
-								<li><i class="fa fa-comments"></i>57</li>
+                                {% if blogpost %}
+								<li><i class="fa fa-user"></i>{{ blogpost.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ blogpost.created_date|date:'j-M' }}</li>
+								<li><i class="fa fa-tags"></i>{{ blogpost.tag }}</li>
+
 							</ul>
-							<h3>Morbi mattis felis at nunc. Duis viverra</h3>
-							<p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+							<h3>{{ blogpost.title }}</h3>
+							<p>{{ blogpost.text }}</p>
+                                {% else %}
+                                    <p>No blogs are available.</p>
+                                {% endif %}
 						</div>
+
+
 
 						<!-- blog tags -->
 						<div class="blog-tags">
@@ -135,6 +144,7 @@
 							<a href="#"><i class="fa fa-tag"></i>Branding</a>
 							<a href="#"><i class="fa fa-tag"></i>Photography</a>
 						</div>
+
 						<!-- blog tags -->
 
 						<!-- blog author -->
@@ -160,11 +170,11 @@
 						<!-- /blog author -->
 
 						<!-- blog comments -->
-						<div class="blog-comments">
+	<!-- <div class="blog-comments">
 							<h3 class="title">(13) Comments</h3>
-
+-->
 							<!-- comment -->
-							<div class="media">
+<!--						<div class="media">
 								<div class="media-left">
 									<img class="media-object" src="/static/img/perso2.jpg" alt="">
 								</div>
@@ -176,7 +186,7 @@
 							<!-- /comment -->
 
 							<!-- comment -->
-							<div class="media">
+<!--							<div class="media">
 								<div class="media-left">
 									<img class="media-object" src="/static/img/perso1.jpg" alt="">
 								</div>
@@ -186,7 +196,7 @@
 								</div>
 
 								<!-- author reply comment -->
-								<div class="media author">
+		<!--						<div class="media author">
 									<div class="media-left">
 										<img class="media-object" src="/static/img/perso2.jpg" alt="">
 									</div>
@@ -198,7 +208,7 @@
 								<!-- /comment -->
 
 								<!-- reply comment -->
-								<div class="media">
+		<!--						<div class="media">
 									<div class="media-left">
 										<img class="media-object" src="/static/img/perso2.jpg" alt="">
 									</div>
@@ -209,12 +219,12 @@
 								</div>
 								<!-- /comment -->
 
-							</div>
+			<!--				</div>
 							<!-- /comment -->
 
 
 							<!-- comment -->
-							<div class="media">
+		<!--					<div class="media">
 								<div class="media-left">
 									<img class="media-object" src="/static/img/perso1.jpg" alt="">
 								</div>
@@ -225,11 +235,11 @@
 							</div>
 							<!-- /comment -->
 
-						</div>
+			<!--			</div>
 						<!-- /blog comments -->
 
 						<!-- reply form -->
-						<div class="reply-form">
+			<!--			<div class="reply-form">
 							<h3 class="title">Leave a reply</h3>
 							<form>
 								<input class="input" type="text" placeholder="Name">
@@ -239,7 +249,7 @@
 							</form>
 						</div>
 						<!-- /reply form -->
-					</div>
+				<!--	</div> -->
 				</main>
 				<!-- /Main -->
 
@@ -256,16 +266,22 @@
 					</div>
 					<!-- /Search -->
 
+
 					<!-- Category -->
 					<div class="widget">
-						<h3 class="title">Category</h3>
+						<h3 class="title">Konu</h3>
 						<div class="widget-category">
-							<a href="#">Web Design<span>(7)</span></a>
-							<a href="#">Marketing<span>(142)</span></a>
-							<a href="#">Web Development<span>(74)</span></a>
-							<a href="#">Branding<span>(60)</span></a>
-							<a href="#">Photography<span>(5)</span></a>
-						</div>
+                            {% if distinct_tag_number %}
+                                {% for tag in distinct_tag_number %}
+							<a href="#">{{ tag.tag }}
+
+                                <span>({{ tag.id__count }})</span></a>
+
+                                {% endfor %}
+                            {% endif %}
+
+
+                        </div>
 					</div>
 					<!-- /Category -->
 

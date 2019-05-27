@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="01da24c9-03c3-4e64-b2c3-f5bf22a3bada" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avukat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/avukat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/blog/templates/blog/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/templates/blog/index1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/index/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/modules/index/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/index/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,54 +23,77 @@
     <session id="438230455">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.8" value="7" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="13" />
+          <entry key="html" value="14" />
           <entry key="js" value="1" />
-          <entry key="py" value="68" />
+          <entry key="py" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="13" />
+          <entry key="HTML" value="14" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="68" />
+          <entry key="Python" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1258" />
-          <entry key="py" value="1709" />
+          <entry key="html" value="2367" />
+          <entry key="py" value="2588" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1258" />
-          <entry key="Python" value="1709" />
+          <entry key="HTML" value="2367" />
+          <entry key="Python" value="2588" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/index/templates/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="766" column="99" selection-start-line="766" selection-start-column="99" selection-end-line="766" selection-end-column="99" />
+            <state relative-caret-position="430">
+              <caret line="823" column="43" selection-start-line="823" selection-start-column="43" selection-end-line="823" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="281" column="28" selection-start-line="281" selection-start-column="28" selection-end-line="281" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/blog/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1558917383743" expanded="true" signature="153:154" ph="..." />
+                <marker date="1558917383743" expanded="true" signature="153:157" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,11 +101,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1558382647049" expanded="true" signature="127:211" ph="..." />
+                <marker date="1558917139837" expanded="true" signature="127:211" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/avukat/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/index/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/blog/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,43 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/index1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="73" column="52" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/blog/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1558743316239" expanded="true" signature="86:87" ph="..." />
-                <marker date="1558743316239" expanded="true" signature="86:90" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/blog/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -157,6 +183,7 @@
     <findStrings>
       <find>recent</find>
       <find>fas</find>
+      <find>blog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,13 +206,15 @@
         <option value="$PROJECT_DIR$/modules/blog/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/avukat/settings.py" />
         <option value="$PROJECT_DIR$/modules/index/templates/index/blog-single.html" />
-        <option value="$PROJECT_DIR$/modules/blog/urls.py" />
-        <option value="$PROJECT_DIR$/avukat/urls.py" />
         <option value="$PROJECT_DIR$/modules/index/urls.py" />
-        <option value="$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html" />
-        <option value="$PROJECT_DIR$/modules/blog/views.py" />
         <option value="$PROJECT_DIR$/modules/index/views.py" />
+        <option value="$PROJECT_DIR$/modules/blog/templates/blog/index1.html" />
+        <option value="$PROJECT_DIR$/modules/blog/urls.py" />
         <option value="$PROJECT_DIR$/modules/index/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/avukat/urls.py" />
+        <option value="$PROJECT_DIR$/modules/blog/models.py" />
+        <option value="$PROJECT_DIR$/modules/blog/views.py" />
+        <option value="$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html" />
       </list>
     </option>
   </component>
@@ -207,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,6 +316,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +325,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../env" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -369,12 +398,12 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.2803838" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.26279318" />
       <window_info id="Structure" order="1" sideWeight="0.5007752" side_tool="true" weight="0.26865673" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32848233" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32848233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,13 +520,10 @@
     <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/avukat/urls.py">
+    <entry file="file://$PROJECT_DIR$/static/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="63">
+          <caret line="3" column="6003" selection-start-line="3" selection-start-column="6003" selection-end-line="3" selection-end-column="6003" />
         </state>
       </provider>
     </entry>
@@ -513,29 +539,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html">
+    <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/index1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="73" column="52" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="52" />
+        <state relative-caret-position="294">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/blog/views.py">
+    <entry file="file://$PROJECT_DIR$/avukat/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="462">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1558743316239" expanded="true" signature="86:87" ph="..." />
-            <marker date="1558743316239" expanded="true" signature="86:90" ph="..." />
+            <element signature="e#630#662#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -551,35 +575,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="6003" selection-start-line="3" selection-start-column="6003" selection-end-line="3" selection-end-column="6003" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1558382647049" expanded="true" signature="127:211" ph="..." />
+            <marker date="1558917139837" expanded="true" signature="127:211" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/index/templates/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="766" column="99" selection-start-line="766" selection-start-column="99" selection-end-line="766" selection-end-column="99" />
+        <state relative-caret-position="430">
+          <caret line="823" column="43" selection-start-line="823" selection-start-column="43" selection-end-line="823" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1558917383743" expanded="true" signature="153:154" ph="..." />
+            <marker date="1558917383743" expanded="true" signature="153:157" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/blog/templates/blog/blog-single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="281" column="28" selection-start-line="281" selection-start-column="28" selection-end-line="281" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    {% if latest_blog %}
+    {% if blogpost %}
     <ul>
-        {% for blog in latest_blog %}
-        <li>{{ blog.title }}</li>
-            <li>{{ blog.text }}</li>
-        {% endfor %}
+
+        <li>{{ blogpost.title }}</li>
+            <li>{{ blogpost.text }}</li>
+
     </ul>
     {% else %}
         <p>No blogs are available.</p>
