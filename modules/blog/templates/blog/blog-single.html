@@ -115,21 +115,21 @@
 				<main id="main" class="col-md-9">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive" src="/static/img/blog-post.jpg" alt="">
+                            {{ blogpost.image }}
+							<img class="img-responsive" src="{{ blogpost.image.url }}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-                                {% if blogpost %}
+                                    {% if blogpost %}
 								<li><i class="fa fa-user"></i>{{ blogpost.author }}</li>
 								<li><i class="fa fa-clock-o"></i>{{ blogpost.created_date|date:'j-M' }}</li>
 								<li><i class="fa fa-tags"></i>{{ blogpost.tag }}</li>
 
 							</ul>
-							<h3>{{ blogpost.title }}</h3>
-							<p>{{ blogpost.text }}</p>
-                                {% else %}
-                                    <p>No blogs are available.</p>
-                                {% endif %}
+							<h3 class="content-markdown">{{ blogpost.title }}</h3>
+							<p class="content-markdown">{{ blogpost.text }}</p>
+
+
 						</div>
 
 
@@ -137,25 +137,22 @@
 						<!-- blog tags -->
 						<div class="blog-tags">
 							<h5>Tags :</h5>
-							<a href="#"><i class="fa fa-tag"></i>Web</a>
-							<a href="#"><i class="fa fa-tag"></i>Design</a>
-							<a href="#"><i class="fa fa-tag"></i>Marketing</a>
-							<a href="#"><i class="fa fa-tag"></i>Development</a>
-							<a href="#"><i class="fa fa-tag"></i>Branding</a>
-							<a href="#"><i class="fa fa-tag"></i>Photography</a>
-						</div>
 
+							<a href="#"><i class="fa fa-tag"></i>{{ blogpost.tag }}</a>
+
+						</div>
+                        {% endif %}
 						<!-- blog tags -->
 
 						<!-- blog author -->
 						<div class="blog-author">
 							<div class="media">
 								<div class="media-left">
-									<img class="media-object" src="/static/img/author.jpg" alt="">
+									<img class="media-object" src="/static/img/samet.jpg" alt="">
 								</div>
 								<div class="media-body">
 									<div class="media-heading">
-										<h3>Joe Doe</h3>
+										<h3>Samet Varol</h3>
 										<div class="author-social">
 											<a href="#"><i class="fa fa-facebook"></i></a>
 											<a href="#"><i class="fa fa-twitter"></i></a>
@@ -327,17 +324,14 @@
 					<!-- /Posts sidebar -->
 
 					<!-- Tags -->
-					<div class="widget">
+		<!--			<div class="widget">
 						<h3 class="title">Tags</h3>
+
 						<div class="widget-tags">
-							<a href="#">Web</a>
-							<a href="#">Design</a>
-							<a href="#">Graphic</a>
-							<a href="#">Marketing</a>
-							<a href="#">Development</a>
-							<a href="#">Branding</a>
-							<a href="#">Photography</a>
+							<a href="#"></a>
+
 						</div>
+
 					</div>
 					<!-- /Tags -->
 
@@ -419,7 +413,19 @@
 	<script type="text/javascript" src="/static/js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="/static/js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/marked.min.js"></script>
 
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".content-markdown").each(function () {
+      var content = $(this).text()
+      var markedContent = marked(content)
+      $(this).html(markedContent)
+    })
+
+  })
+
+    </script>
 </body>
 
 </html>
