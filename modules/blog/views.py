@@ -26,6 +26,4 @@ def detail(request, id):
         'distinct_tag_number': distinct_tag_number
     }
 
-
-
     return render(request, 'blog/blog-single.html', context)

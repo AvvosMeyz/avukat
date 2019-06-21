@@ -1,12 +1,17 @@
 {% load static from staticfiles %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1"> <!-- inital-scale=1 -->
+
+
+
+    <meta name="keywords" content="Samet Varol, avukat, hukuk, hukukçu, adalet, savunma, iddia, eşitlik, hak, antalya, nazilli,">
+
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>Avukat Samet Varol</title>
@@ -54,7 +59,7 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a href="index.html">
+						<a href="{% url 'index:index' %}">
 							<img class="logo" src="/static/img/logo.png" alt="logo">
 							<img class="logo-alt" src="/static/img/logo-alt.png" alt="logo">
 						</a>
@@ -76,7 +81,7 @@
 					<li><a href="#service">Faaliyet Alanlarımız</a></li>
 				<!--<li><a href="#pricing">Prices</a></li> -->	
 				<!--<li><a href="#team">Team</a></li>-->
-					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
+					<li class="has-dropdown"><a href="#blog">En Son Makalelerim</a>
 						<ul class="dropdown">
 							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
 						</ul>
@@ -756,10 +761,12 @@
             {% if latest_blog %}
                 {% for blog in latest_blog %}
                     {% if forloop.last %}
+
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive" src="/static/img/blog1.jpg" alt="">
+
+							<img class="img-responsive" src="{{ blog.image_url }}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
@@ -767,11 +774,12 @@
 								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
                                 <li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>{{ blog.title }}</h3>
+							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
 							<p>{{ blog.text|truncatewords:"12" }}</p>
 
                             <a href="/blog/{{ blog.id }}">Devamı</a>
-                      {% endif %}
+
+                    {% endif %}
                 {% endfor %}
             {% endif %}
 						</div>
@@ -786,7 +794,7 @@
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive" src="/static/img/blog2.jpg" alt="">
+							<img class="img-responsive" src="/{{ blog.image_url}}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
@@ -794,7 +802,7 @@
 								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
 								<li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>{{ blog.title }}</h3>
+							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
 							<p>{{ blog.text|truncatewords:"12" }}</p>
 							<a href="/blog/{{ blog.id }}">Devamı</a>
 						</div>
@@ -812,7 +820,7 @@
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive"  src="/static/img/blog3.jpg" alt="">
+							<img class="img-responsive"  src="/{{ blog.image_url }}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
@@ -820,7 +828,7 @@
 								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
 								<li><i class="fa fa-tags"></i>{{ blog.tag }}</li>
 							</ul>
-							<h3>{{ blog.title }}</h3>
+							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
 							<p>{{ blog.text|truncatewords:"12" }}</p>
 							<a href="/blog/{{ blog.id }}">Devamı</a>
 						</div>
@@ -874,7 +882,7 @@
 					</div>
 				</div>
 				<!-- /contact -->
-
+				
 				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
@@ -974,6 +982,7 @@
 	<script type="text/javascript" src="/static/js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="/static/js/main.js"></script>
     <script type="text/javascript" src="/static/js/marked.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 
 </body>
 

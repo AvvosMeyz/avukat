@@ -10,7 +10,18 @@ class BlogPost(models.Model):
     created_date = models.DateTimeField('yazılan tarih',default=timezone.now)
     published_date = models.DateTimeField('paylaşılan tarih',blank=True, null=True)
     tag = models.CharField('etiket', max_length=50)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(
+        blank=True,
+        null=True,
+        default="static/img/default_blog.jpg", upload_to="static/img/%Y/%m/%d"
+    )
+
+    @property
+    def image_url(self):
+        if self.image:
+            return self.image.url
+        else:
+            return "/static/img/default_blog.jpg"
 
     def __str__(self):
         return self.title

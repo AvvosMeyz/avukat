@@ -26,6 +26,6 @@ urlpatterns = [
     path('api/', include('modules.api.urls')),
     path('admin/', admin.site.urls),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + staticfiles_urlpatterns()
+]
 
-#urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # + staticfiles_urlpatterns()

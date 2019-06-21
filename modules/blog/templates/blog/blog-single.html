@@ -66,9 +66,9 @@
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="{% url 'index:index' %}">Anasayfa</a></li>
-					<li><a href="#about">Hakkımızda</a></li>
+					<li><a href="{% url 'index:index' %}#about">Hakkımızda</a></li>
 			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
-					<li><a href="#service">Faaliyet Alanlarımız</a></li>
+					<li><a href="{% url 'index:index' %}#Service">Faaliyet Alanlarımız</a></li>
 				<!--<li><a href="#pricing">Prices</a></li> -->
 				<!--<li><a href="#team">Team</a></li>-->
 					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
@@ -76,7 +76,7 @@
 							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
 						</ul>
 					</li>
-					<li><a href="#contact">İletişim</a></li>
+					<li><a href="{% url 'index:index' %}#contact">İletişim</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -103,6 +103,9 @@
 	<!-- /Header -->
 
 	<!-- Blog -->
+
+
+
 	<div id="blog" class="section md-padding">
 
 		<!-- Container -->
@@ -115,8 +118,9 @@
 				<main id="main" class="col-md-9">
 					<div class="blog">
 						<div class="blog-img">
-                            {{ blogpost.image }}
-							<img class="img-responsive" src="{{ blogpost.image.url }}" alt="">
+
+							<img class="img-responsive" src="/{{ blogpost.image_url      }}" alt="">
+
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
@@ -414,7 +418,7 @@
 	<script type="text/javascript" src="/static/js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="/static/js/main.js"></script>
     <script type="text/javascript" src="/static/js/marked.min.js"></script>
-
+    <script type="text/javascript" src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function () {
         $(".content-markdown").each(function () {
