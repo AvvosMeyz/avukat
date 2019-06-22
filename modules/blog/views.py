@@ -6,8 +6,12 @@ from django.db.models import Count
 
 def index(request):
     latest_blog = BlogPost.objects.all()
+    distinct_tags = BlogPost.objects.all().distinct('tag').order_by('tag')
+    distinct_tag_number = BlogPost.objects.all().values('tag').annotate(Count('id')).order_by('tag')
     context = {
         'latest_blog': latest_blog,
+        'distinct_tags': distinct_tags,
+        'distinct_tag_number': distinct_tag_number,
     }
     return render(request, 'blog/index1.html', context)
 
@@ -27,3 +31,5 @@ def detail(request, id):
     }
 
     return render(request, 'blog/blog-single.html', context)
+
+
