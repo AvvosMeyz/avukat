@@ -1,15 +1,20 @@
 {% load static from staticfiles %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1"> <!-- inital-scale=1 -->
+
+
+
+    <meta name="keywords" content="Samet Varol, avukat, hukuk, hukukçu, adalet, savunma, iddia, eşitlik, hak, antalya, nazilli,">
+
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>HTML Template</title>
+	<title>{% block title %} {% endblock %} </title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -22,13 +27,13 @@
     <link type="text/css" rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}" />
 
 	<!-- Magnific Popup -->
-	<link type="text/css" rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,116 +42,10 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-
 <body>
-
-	<!-- Header -->
-	<header>
-
-		<!-- Nav -->
-		<nav id="nav" class="navbar">
-			<div class="container">
-
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a href="{% url 'index:index'   %}">
-							<img class="logo" src="/static/img/logo.png" alt="logo">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Collapse nav button -->
-					<div class="nav-collapse">
-						<span></span>
-					</div>
-					<!-- /Collapse nav button -->
-				</div>
-
-				<!--  Main navigation  -->
-				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="{% url 'index:index' %}">Anasayfa</a></li>
-					<li><a href="{% url 'index:index' %}#about">Hakkımızda</a></li>
-			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
-					<li><a href="{% url 'index:index' %}#Service">Faaliyet Alanlarımız</a></li>
-				<!--<li><a href="#pricing">Prices</a></li> -->
-				<!--<li><a href="#team">Team</a></li>-->
-					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
-						<ul class="dropdown">
-							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
-						</ul>
-					</li>
-					<li><a href="{% url 'index:index' %}#contact">İletişim</a></li>
-				</ul>
-				<!-- /Main navigation -->
-
-			</div>
-		</nav>
-		<!-- /Nav -->
-
-		<!-- header wrapper -->
-        <!--
-		<div class="header-wrapper sm-padding bg-grey">
-			<div class="container">
-				<h2>Blog Page</h2>
-				<ul class="breadcrumb">
-					<li class="breadcrumb-item"><a href="../../../index/templates/index/index.html">Home</a></li>
-					<li class="breadcrumb-item"><a href="../../../index/templates/index/index.html#blog">Blog</a></li>
-					<li class="breadcrumb-item active">Single Post</li>
-				</ul>
-			</div>
-		</div>
-	    -->
-		<!-- /header wrapper -->
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Blog -->
-
-
-    <!-- About -->
-	<div id="about" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Makaleler</h2>
-				</div>
-				<!-- /Section header -->
-                {% if distinct_tags %}
-                    {% for tag in distinct_tags %}
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-
-						<h3><a href=""> {{ tag.get_tag_display }} </a></h3>
-
-
-					</div>
-				</div>
-                    {% endfor %}
-
-                {% endif %}
-				<!-- /about -->
-
-
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /About -->
-
-	<!-- Footer -->
+    {% block main %}
+    {% endblock %}
+    <!-- Footer -->
 	<footer id="footer" class="sm-padding bg-dark">
 
 		<!-- Container -->
@@ -226,5 +125,4 @@
 
     </script>
 </body>
-
 </html>
