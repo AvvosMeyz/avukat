@@ -1,0 +1,1 @@
+web: gunicorn avukat.wsgi.py --log-file -
