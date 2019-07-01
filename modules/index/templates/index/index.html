@@ -34,13 +34,10 @@
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="#home">Anasayfa</a></li>
 					<li><a href="#about">Hakkımızda</a></li>
-			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
 					<li><a href="#service">Faaliyet Alanlarımız</a></li>
-				<!--<li><a href="#pricing">Prices</a></li> -->
-				<!--<li><a href="#team">Team</a></li>-->
 					<li class="has-dropdown"><a href="#blog">En Son Makalelerim</a>
 						<ul class="dropdown">
-							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
+							<li><a href="{% url 'blog:blog' %}">Makaleler</a></li>
 						</ul>
 					</li>
 					<li><a href="#contact">İletişim</a></li>
@@ -188,7 +185,7 @@
 						<h3>Gayrimenkul Hukuku</h3>
 						<div class="work-link">
 							<a href="#"><i class="fa fa-external-link"></i></a>
-							<a class="lightbox" href="/static/img/work13jpg"><i class="fa fa-search"></i></a>
+							<a class="lightbox" href="/static/img/work3.jpg"><i class="fa fa-search"></i></a>
 						</div>
 					</div>
 				</div>
@@ -452,253 +449,6 @@
 	</div>
 	<!-- /Numbers -->
 
-	<!-- Pricing -->
-<!--	<div id="pricing" class="section md-padding">
-
-		<!-- Container -->
-<!--		<div class="container">
-
-			<!-- Row -->
-<!--			<div class="row">
-
-				<!-- Section header -->
-<!--				<div class="section-header text-center">
-					<h2 class="title">Pricing Table</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- pricing -->
-<!--				<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title">Basic plan</span>
-							<div class="price">
-								<h3>$9<span class="duration">/ month</span></h3>
-							</div>
-						</div>
-						<ul class="price-content">
-							<li>
-								<p>1GB Disk Space</p>
-							</li>
-							<li>
-								<p>100 Email Account</p>
-							</li>
-							<li>
-								<p>24/24 Support</p>
-							</li>
-						</ul>
-						<div class="price-btn">
-							<button class="outline-btn">Purchase now</button>
-						</div>
-					</div>
-				</div>
-				<!-- /pricing -->
-
-				<!-- pricing -->
-	<!--			<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title">Silver plan</span>
-							<div class="price">
-								<h3>$19<span class="duration">/ month</span></h3>
-							</div>
-						</div>
-						<ul class="price-content">
-							<li>
-								<p>1GB Disk Space</p>
-							</li>
-							<li>
-								<p>100 Email Account</p>
-							</li>
-							<li>
-								<p>24/24 Support</p>
-							</li>
-						</ul>
-						<div class="price-btn">
-							<button class="outline-btn">Purchase now</button>
-						</div>
-					</div>
-				</div>
-				<!-- /pricing -->
-
-				<!-- pricing -->
-<!--				<div class="col-sm-4">
-					<div class="pricing">
-						<div class="price-head">
-							<span class="price-title">Gold plan</span>
-							<div class="price">
-								<h3>$39<span class="duration">/ month</span></h3>
-							</div>
-						</div>
-						<ul class="price-content">
-							<li>
-								<p>1GB Disk Space</p>
-							</li>
-							<li>
-								<p>100 Email Account</p>
-							</li>
-							<li>
-								<p>24/24 Support</p>
-							</li>
-						</ul>
-						<div class="price-btn">
-							<button class="outline-btn">Purchase now</button>
-						</div>
-					</div>
-				</div>
-				<!-- /pricing -->
-
-	<!--		</div>
-			<!-- Row -->
-
-<!--		</div>
-		<!-- /Container -->
-
-<!--	</div>
-	<!-- /Pricing -->
-
-
-	<!-- Testimonial -->
-<!--	<div id="testimonial" class="section md-padding">
-
-		<!-- Background Image -->
-<!--		<div class="bg-img" style="background-image: url('/static/img/background3.jpg');">
-			<div class="overlay"></div>
-		</div>
-		<!-- /Background Image -->
-
-		<!-- Container -->
-<!--		<div class="container">
-
-			<!-- Row -->
-	<!--		<div class="row">
-
-				<!-- Testimonial slider -->
-	<!--			<div class="col-md-10 col-md-offset-1">
-	<!--				<div id="testimonial-slider" class="owl-carousel owl-theme">
-
-						<!-- testimonial -->
-		<!--				<div class="testimonial">
-							<div class="testimonial-meta">
-								<img src="/static/img/perso1.jpg" alt="">
-								<h3 class="white-text">John Doe</h3>
-								<span>Web Designer</span>
-							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-						</div>
-						<!-- /testimonial -->
-
-						<!-- testimonial -->
-	<!--					<div class="testimonial">
-							<div class="testimonial-meta">
-								<img src="/static/img/perso2.jpg" alt="">
-								<h3 class="white-text">John Doe</h3>
-								<span>Web Designer</span>
-							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-						</div>
-						<!-- /testimonial -->
-
-	<!--				</div>
-				</div>
-				<!-- /Testimonial slider -->
-
-	<!--	</div>
-			<!-- /Row -->
-
-	<!--	</div>
-		<!-- /Container -->
-
-<!--	</div>
-	<!-- /Testimonial -->
-
-	<!-- Team -->
-<!--	<div id="team" class="section md-padding">
-
-		<!-- Container -->
-<!--		<div class="container">
-
-			<!-- Row -->
-<!--			<div class="row">
-
-				<!-- Section header -->
-	<!--			<div class="section-header text-center">
-					<h2 class="title">Outssdsd</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- team -->
-	<!--			<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="/static/img/team1.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-<!--				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="/static/img/team2.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-	<!--			<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="/static/img/team3.jpg" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>John Doe</h3>
-							<span>Web Designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-	<!--		</div>
-			<!-- /Row -->
-
-<!--		</div>
-		<!-- /Container -->
-
-<!--	</div>
-	<!-- /Team -->
-
 	<!-- Blog -->
 	<div id="blog" class="section md-padding bg-grey">
 
@@ -715,90 +465,72 @@
 				<!-- /Section header -->
 
 				<!-- blog -->
-            {% if latest_blog %}
-                {% for blog in latest_blog %}
-                    {% if forloop.last %}
-
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
 
-							<img class="img-responsive" src="{{ blog.image_url }}" alt="">
+							<img class="img-responsive" src="{{ last_item.image_url }}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
-								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
-                                <li><i class="fa fa-tags"></i>{{ blog.get_tag_display }}</li>
+								<li><i class="fa fa-user"></i>{{ last_item.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ last_item.created_date|date:'j-M' }}</li>
+                                <li><i class="fa fa-tags"></i>{{ last_item.category }}</li>
 							</ul>
-							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
-							<p>{{ blog.text|truncatewords:"12" }}</p>
+							<h3><a href="{% url 'blog:detail' slug=last_item.category.slug slug2=last_item.slug %}">{{ last_item.title }}</a></h3>
+							<p>{{ last_item.text|truncatewords:"12" }}</p>
+                                hey
+                            <a href="{% url 'blog:detail' slug=last_item.category.slug slug2=last_item.slug %}">Devamı</a>
 
-                            <a href="/blog/{{ blog.id }}">Devamı</a>
 
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
 						</div>
 					</div>
 				</div>
 				<!-- /blog -->
 
 				<!-- blog -->
-            {% if latest_blog %}
-                {% for blog in latest_blog %}
-                    {% ifequal forloop.revcounter 2 %}
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive" src="/{{ blog.image_url}}" alt="">
+							<img class="img-responsive" src="/{{ mid_item.image_url}}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
-								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
-								<li><i class="fa fa-tags"></i>{{ blog.get_tag_display }}</li>
+								<li><i class="fa fa-user"></i>{{ mid_item.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ mid_item.created_date|date:'j-M' }}</li>
+								<li><i class="fa fa-tags"></i>{{ mid_item.category }}</li>
 							</ul>
-							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
-							<p>{{ blog.text|truncatewords:"12" }}</p>
-							<a href="/blog/{{ blog.id }}">Devamı</a>
+							<h3><a href="{% url 'blog:detail' slug=mid_item.category.slug slug2=mid_item.slug %}">{{ mid_item.title }}</a></h3>
+							<p>{{ mid_item.text|truncatewords:"12" }}</p>
+							<a href="/blog/{{ blog.tag }}/{{ blog.slug }}">Devamı</a>
 						</div>
 					</div>
 				</div>
-                    {% endifequal %}
-                {% endfor %}
-            {% endif %}
+
 				<!-- /blog -->
 
 				<!-- blog -->
-            {% if latest_blog %}
-                {% for blog in latest_blog %}
-                    {% ifequal forloop.revcounter 3 %}
 				<div class="col-md-4">
 					<div class="blog">
 						<div class="blog-img">
-							<img class="img-responsive"  src="/{{ blog.image_url }}" alt="">
+							<img class="img-responsive"  src="/{{ first_item.image_url }}" alt="">
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								<li><i class="fa fa-user"></i>{{ blog.author }}</li>
-								<li><i class="fa fa-clock-o"></i>{{ blog.created_date|date:'j-M' }}</li>
-								<li><i class="fa fa-tags"></i>{{ blog.get_tag_display }}</li>
+								<li><i class="fa fa-user"></i>{{ first_item.author }}</li>
+								<li><i class="fa fa-clock-o"></i>{{ first_item.created_date|date:'j-M' }}</li>
+								<li><i class="fa fa-tags"></i>{{ first_item.category }}</li>
 							</ul>
-							<h3><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h3>
-							<p>{{ blog.text|truncatewords:"12" }}</p>
-							<a href="/blog/{{ blog.id }}">Devamı</a>
+							<h3><a href="{% url 'blog:detail' slug=first_item.category.slug slug2=first_item.slug %}">{{ first_item.title }}</a></h3>
+							<p>{{ first_item.text|truncatewords:"12" }}</p>
+							<a href="/blog/{{ blog.tag }}/{{ blog.slug }}">Devamı</a>
 						</div>
 					</div>
 				</div>
-                    {% endifequal %}
-                {% endfor %}
-            {% endif %}
-				<!-- /blog -->
 
+				<!-- /blog -->
 			</div>
 			<!-- /Row -->
-
 		</div>
 		<!-- /Container -->
 

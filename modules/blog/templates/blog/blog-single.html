@@ -34,7 +34,7 @@
 				<!--<li><a href="#team">Team</a></li>-->
 					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
 						<ul class="dropdown">
-							<li><a href="{% url 'home:blog' %}">Makaleler</a></li>
+							<li><a href="{% url 'blog:blog' %}">Makaleler</a></li>
 						</ul>
 					</li>
 					<li><a href="{% url 'index:index' %}#contact">İletişim</a></li>
@@ -79,13 +79,13 @@
 				<main id="main" class="col-md-9">
 					<div class="blog">
 						<div class="blog-img">
-
+                            {% if blogpost %}
 							<img class="img-responsive" src="/{{ blogpost.image_url }}" alt="">
 
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-                                    {% if blogpost %}
+
 								<li><i class="fa fa-user"></i>{{ blogpost.author }}</li>
 								<li><i class="fa fa-clock-o"></i>{{ blogpost.created_date|date:'j-M' }}</li>
 								<li><i class="fa fa-tags"></i>{{ blogpost.get_tag_display }}</li>
@@ -106,6 +106,7 @@
 							<a href="#"><i class="fa fa-tag"></i>{{ blogpost.get_tag_display }}</a>
 
 						</div>
+
                         {% endif %}
 						<!-- blog tags -->
 
@@ -129,92 +130,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- /blog author -->
-
-						<!-- blog comments -->
-	<!-- <div class="blog-comments">
-							<h3 class="title">(13) Comments</h3>
--->
-							<!-- comment -->
-<!--						<div class="media">
-								<div class="media-left">
-									<img class="media-object" src="/static/img/perso2.jpg" alt="">
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-								</div>
-							</div>
-							 /comment -->
-
-							<!-- comment -->
-<!--							<div class="media">
-								<div class="media-left">
-									<img class="media-object" src="/static/img/perso1.jpg" alt="">
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-								</div>
-
-								author reply comment -->
-		<!--						<div class="media author">
-									<div class="media-left">
-										<img class="media-object" src="/static/img/perso2.jpg" alt="">
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-									</div>
-								</div>
-								/comment -->
-
-								<!-- reply comment -->
-		<!--						<div class="media">
-									<div class="media-left">
-										<img class="media-object" src="/static/img/perso2.jpg" alt="">
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-									</div>
-								</div>
-								 /comment -->
-
-			<!--				</div>
-							 /comment -->
-
-
-							<!-- comment -->
-		<!--					<div class="media">
-								<div class="media-left">
-									<img class="media-object" src="/static/img/perso1.jpg" alt="">
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-								</div>
-							</div>
-							 /comment -->
-
-			<!--			</div>
-						 /blog comments -->
-
-						<!-- reply form -->
-			<!--			<div class="reply-form">
-							<h3 class="title">Leave a reply</h3>
-							<form>
-								<input class="input" type="text" placeholder="Name">
-								<input class="input" type="email" placeholder="Email">
-								<textarea placeholder="Add Your Commment"></textarea>
-								<button type="submit" class="main-btn">Submit</button>
-							</form>
-						</div>
-						 /reply form -->
-				<!--	</div> -->
-				</main>
-				<!-- /Main -->
-
+                    </div>
+                </main>
 
 				<!-- Aside -->
 				<aside id="aside" class="col-md-3">
@@ -298,7 +215,7 @@
 						</div>
 
 					</div>
-					<!-- /Tags -->
+					 /Tags -->
 
 				</aside>
 				<!-- /Aside -->

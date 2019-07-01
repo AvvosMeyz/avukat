@@ -19,10 +19,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
 
+app_name = 'base'
 
 urlpatterns = [
-    path('', include('modules.index.urls', namespace='index')),
-    path('blog/', include('modules.blog.urls', namespace='home')),
+    path('', include('modules.index.urls',)),
+    path('blog/', include('modules.blog.urls', )),
     path('api/', include('modules.api.urls')),
     path('admin/', admin.site.urls),
 

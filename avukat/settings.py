@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'avukat.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ozwgqygi',
-        'USER': 'ozwgqygi',
-        'PASSWORD': 'gSlYcm3K8j5yBunAA3yKeX8rVmc9AhRY',
-        'HOST': 'rogue.db.elephantsql.com',
+        'NAME': 'liccyjrt',
+        'USER': 'liccyjrt',
+        'PASSWORD': '7FiLj8EdRuJQo6bEliD3EUKOksIlb_wV',
+        'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432'
 
     }

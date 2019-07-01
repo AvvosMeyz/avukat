@@ -1,0 +1,124 @@
+{% extends "index/base.html" %}
+{% block title %} Avukat Samet Varoll {% endblock %}
+{% block main %}
+
+<!-- Header -->
+	<header>
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="{% url 'index:index'   %}">
+							<img class="logo" src="/static/img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="{% url 'index:index' %}">Anasayfa</a></li>
+					<li><a href="{% url 'index:index' %}#about">Hakkımızda</a></li>
+			    <!--<li><a href="#portfolio">Portfolio</a></li>-->
+					<li><a href="{% url 'index:index' %}#Service">Faaliyet Alanlarımız</a></li>
+				<!--<li><a href="#pricing">Prices</a></li> -->
+				<!--<li><a href="#team">Team</a></li>-->
+					<li class="has-dropdown"><a href="#blog">Yazılarım</a>
+						<ul class="dropdown">
+							<li><a href="{% url 'blog:blog' %}">Makaleler</a></li>
+						</ul>
+					</li>
+					<li><a href="{% url 'index:index' %}#contact">İletişim</a></li>
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+
+		<!-- header wrapper -->
+        <!--
+		<div class="header-wrapper sm-padding bg-grey">
+			<div class="container">
+				<h2>Blog Page</h2>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a href="../../../index/templates/index/index.html">Home</a></li>
+					<li class="breadcrumb-item"><a href="../../../index/templates/index/index.html#blog">Blog</a></li>
+					<li class="breadcrumb-item active">Single Post</li>
+				</ul>
+			</div>
+		</div>
+	    -->
+		<!-- /header wrapper -->
+
+	</header>
+	<!-- /Header -->
+
+
+
+        <div id="blog" class="section md-padding">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row">
+        {% if cat.name == 'Ceza Hukuku' %}
+
+				<!-- Main -->
+				<main id="main" class="col-md-9">
+					<div class="blog">
+						<div class="blog-img">
+
+							<img class="img-responsive" src="/{{ cat.image_url }}" alt="">
+
+						</div>
+						<div class="blog-content">
+
+							<h3 class="content-markdown">{{ cat.title }}</h3>
+							<p class="content-markdown">{{ cat.content }}</p>
+                        </div>
+
+                    </div>
+        {% endif %}
+
+                    {% for p in post %}
+                        <div class="blog-author">
+							<div class="media">
+								<div class="media-left">
+                                    <a href="{% url 'blog:detail' slug=cat.slug slug2=p.slug %}">
+                                        <img class="media-object" src="/{{ p.image_url }}" alt="">
+                                    </a>
+								</div>
+								<div class="media-body">
+									<div class="media-heading">
+                                        <a href="{% url 'blog:detail' slug=cat.slug slug2=p.slug %}"><h3>{{ p.title }}</h3></a>
+										<div class="author-social">
+											<a href="#"><i class="fa fa-facebook"></i></a>
+											<a href="#"><i class="fa fa-twitter"></i></a>
+											<a href="#"><i class="fa fa-google-plus"></i></a>
+											<a href="#"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+									<p>{{ p.text|truncatewords:7 }}</p>
+								</div>
+							</div>
+						</div>
+                          {% endfor %}
+                </main>
+            </div>
+        </div>
+        </div>
+
+
+
+
+{% endblock %}
